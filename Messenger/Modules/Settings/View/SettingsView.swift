@@ -5,7 +5,7 @@ import UIKit
 protocol DisplaysSettingsView: UIView, AnyObject { }
 
 final class SettingsView: UIView {
-    // MARK: - Initializers
+    // MARK: - Lifecycle
 
     init() {
         super.init(frame: .zero)
