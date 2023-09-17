@@ -5,11 +5,29 @@ import UIKit
 protocol DisplaysSettingsView: UIView, AnyObject { }
 
 final class SettingsView: UIView {
+    // MARK: - Views
+
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.backgroundColor = .systemBackground
+        tableView.tableHeaderView = SettingsHeaderView()
+        tableView.contentInsetAdjustmentBehavior = .never
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
+
+    // MARK: - Private Properties
+
+    private let barHeight: CGFloat?
+
     // MARK: - Lifecycle
 
-    init() {
+    init(barHeight: CGFloat?) {
+        self.barHeight = barHeight
         super.init(frame: .zero)
 
+        addSubviews()
+        setupConstraints()
         backgroundColor = .systemBackground
     }
 
@@ -22,3 +40,22 @@ final class SettingsView: UIView {
 // MARK: - DisplaysSettingsView
 
 extension SettingsView: DisplaysSettingsView { }
+
+// MARK: - Private
+
+private extension SettingsView {
+    func addSubviews() {
+        addSubview(tableView)
+    }
+
+    func setupConstraints() {
+        let guide = safeAreaLayoutGuide
+
+        NSLayoutConstraint.activate([
+            tableView.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
+            tableView.topAnchor.constraint(equalTo: guide.topAnchor, constant: -(barHeight ?? 0) / 2),
+            tableView.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+    }
+}

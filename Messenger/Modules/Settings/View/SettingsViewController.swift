@@ -9,19 +9,8 @@ protocol SettingsDisplayLogic: UIViewController, AnyObject {
 final class SettingsViewController: UIViewController {
     // MARK: - Views
 
-    private lazy var contentView: DisplaysSettingsView = SettingsView()
-    private lazy var leftBarButtonItem: UIBarButtonItem = .init(
-        image: UIImage(systemName: "qrcode"),
-        style: .plain,
-        target: nil,
-        action: nil
-    )
-
-    private lazy var rightBarButtonItem: UIBarButtonItem = .init(
-        title: "Edit",
-        style: .plain,
-        target: nil,
-        action: nil
+    private lazy var contentView: DisplaysSettingsView = SettingsView(
+        barHeight: navigationController?.navigationBar.frame.height
     )
 
     // MARK: - Lifecycle
@@ -35,6 +24,20 @@ final class SettingsViewController: UIViewController {
 
 extension SettingsViewController: SettingsDisplayLogic {
     func configureNavigationBar() {
+        let leftBarButtonItem: UIBarButtonItem = .init(
+            image: UIImage(systemName: "qrcode"),
+            style: .plain,
+            target: nil,
+            action: nil
+        )
+
+        let rightBarButtonItem: UIBarButtonItem = .init(
+            title: "Edit",
+            style: .plain,
+            target: nil,
+            action: nil
+        )
+
         navigationItem.rightBarButtonItem = rightBarButtonItem
         navigationItem.leftBarButtonItem = leftBarButtonItem
     }

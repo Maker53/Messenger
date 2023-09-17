@@ -2,7 +2,7 @@
 
 import UIKit
 
-final class SettingsNavigationBar: UIView {
+final class SettingsHeaderView: UIView {
     // MARK: - Views
 
     private lazy var photoImageView: UIImageView = {
@@ -37,13 +37,14 @@ final class SettingsNavigationBar: UIView {
 
     private lazy var contentStackView: UIStackView = {
         let stackView = UIStackView()
-        
+        stackView.axis = .vertical
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
 
     private lazy var userInfoStackView: UIStackView = {
         let stackView = UIStackView()
-        
+        stackView.axis = .horizontal
         return stackView
     }()
 
@@ -71,7 +72,7 @@ final class SettingsNavigationBar: UIView {
 
 // MARK: - Private
 
-private extension SettingsNavigationBar {
+private extension SettingsHeaderView {
     func addSubviews() {
         userInfoStackView.addArrangedSubview(phoneLabel)
         userInfoStackView.addArrangedSubview(dotView)

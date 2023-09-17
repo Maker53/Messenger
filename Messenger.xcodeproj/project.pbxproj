@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		85DA30EF2AB6EF9A00490EAF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA30EE2AB6EF9A00490EAF /* SettingsViewController.swift */; };
 		85DA30F22AB6F23E00490EAF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA30F12AB6F23E00490EAF /* SettingsView.swift */; };
-		85DA30F42AB70C1C00490EAF /* SettingsNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA30F32AB70C1C00490EAF /* SettingsNavigationBar.swift */; };
+		85DA30F42AB70C1C00490EAF /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA30F32AB70C1C00490EAF /* SettingsHeaderView.swift */; };
 		85DA44692AB5DD6A00F9483F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA44682AB5DD6A00F9483F /* AppDelegate.swift */; };
 		85DA44722AB5DD6B00F9483F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85DA44712AB5DD6B00F9483F /* Assets.xcassets */; };
 		85DA44752AB5DD6B00F9483F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85DA44732AB5DD6B00F9483F /* LaunchScreen.storyboard */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		85DA30EE2AB6EF9A00490EAF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		85DA30F12AB6F23E00490EAF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		85DA30F32AB70C1C00490EAF /* SettingsNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNavigationBar.swift; sourceTree = "<group>"; };
+		85DA30F32AB70C1C00490EAF /* SettingsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderView.swift; sourceTree = "<group>"; };
 		85DA44652AB5DD6A00F9483F /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85DA44682AB5DD6A00F9483F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85DA44712AB5DD6B00F9483F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 			children = (
 				85DA30EE2AB6EF9A00490EAF /* SettingsViewController.swift */,
 				85DA30F12AB6F23E00490EAF /* SettingsView.swift */,
-				85DA30F32AB70C1C00490EAF /* SettingsNavigationBar.swift */,
+				85DA30F32AB70C1C00490EAF /* SettingsHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,7 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85DA30F42AB70C1C00490EAF /* SettingsNavigationBar.swift in Sources */,
+				85DA30F42AB70C1C00490EAF /* SettingsHeaderView.swift in Sources */,
 				85DA30F22AB6F23E00490EAF /* SettingsView.swift in Sources */,
 				85DA44692AB5DD6A00F9483F /* AppDelegate.swift in Sources */,
 				85DA30EF2AB6EF9A00490EAF /* SettingsViewController.swift in Sources */,
