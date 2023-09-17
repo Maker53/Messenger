@@ -9,7 +9,7 @@ final class SettingsView: UIView {
 
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
-        tableView.backgroundColor = .systemBackground
+        tableView.backgroundColor = Color.backgroundColorPrimary
         tableView.tableHeaderView = SettingsHeaderView()
         tableView.contentInsetAdjustmentBehavior = .never
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -28,7 +28,7 @@ final class SettingsView: UIView {
 
         addSubviews()
         setupConstraints()
-        backgroundColor = .systemBackground
+        backgroundColor = Color.backgroundColorPrimary
     }
 
     @available(*, unavailable)

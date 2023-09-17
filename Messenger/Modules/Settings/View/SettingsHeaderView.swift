@@ -31,7 +31,7 @@ final class SettingsHeaderView: UIView {
 
     private lazy var dotView: UIView = {
         let view = UIView()
-        view.backgroundColor = .gray
+        view.backgroundColor = Color.gray
         return view
     }()
 
@@ -52,7 +52,7 @@ final class SettingsHeaderView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .systemBackground
+        backgroundColor = Color.backgroundColorPrimary
         addSubviews()
         setupConstraints()
         
