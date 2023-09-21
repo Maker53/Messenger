@@ -13,6 +13,8 @@
 		85DA30F42AB70C1C00490EAF /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA30F32AB70C1C00490EAF /* SettingsHeaderView.swift */; };
 		85DA3A7C2AB77DDC00490EAF /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA3A7B2AB77DDC00490EAF /* Color.swift */; };
 		85DA3A7E2AB77E3D00490EAF /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA3A7D2AB77E3D00490EAF /* Grid.swift */; };
+		85DA3A832ABCB54400490EAF /* SettingsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA3A822ABCB54400490EAF /* SettingsViewControllerTests.swift */; };
+		85DA3A862ABCB71C00490EAF /* Mirror+reflectProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA3A852ABCB71C00490EAF /* Mirror+reflectProperty.swift */; };
 		85DA44692AB5DD6A00F9483F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA44682AB5DD6A00F9483F /* AppDelegate.swift */; };
 		85DA44722AB5DD6B00F9483F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85DA44712AB5DD6B00F9483F /* Assets.xcassets */; };
 		85DA44752AB5DD6B00F9483F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85DA44732AB5DD6B00F9483F /* LaunchScreen.storyboard */; };
@@ -36,6 +38,8 @@
 		85DA30F32AB70C1C00490EAF /* SettingsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderView.swift; sourceTree = "<group>"; };
 		85DA3A7B2AB77DDC00490EAF /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		85DA3A7D2AB77E3D00490EAF /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		85DA3A822ABCB54400490EAF /* SettingsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerTests.swift; sourceTree = "<group>"; };
+		85DA3A852ABCB71C00490EAF /* Mirror+reflectProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mirror+reflectProperty.swift"; sourceTree = "<group>"; };
 		85DA44652AB5DD6A00F9483F /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85DA44682AB5DD6A00F9483F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85DA44712AB5DD6B00F9483F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,7 +68,8 @@
 		852736922AB8A353001F5B1E /* MessengerTests */ = {
 			isa = PBXGroup;
 			children = (
-				852736932AB8A353001F5B1E /* AppDelegateTests.swift */,
+				85DA3A802ABCB50A00490EAF /* Settings */,
+				85DA3A7F2ABCB4FD00490EAF /* Application */,
 			);
 			path = MessengerTests;
 			sourceTree = "<group>";
@@ -93,6 +98,38 @@
 				85DA30EC2AB6EF4000490EAF /* Settings */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		85DA3A7F2ABCB4FD00490EAF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				852736932AB8A353001F5B1E /* AppDelegateTests.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		85DA3A802ABCB50A00490EAF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				85DA3A812ABCB51400490EAF /* View */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		85DA3A812ABCB51400490EAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				85DA3A822ABCB54400490EAF /* SettingsViewControllerTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		85DA3A842ABCB6F400490EAF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				85DA3A852ABCB71C00490EAF /* Mirror+reflectProperty.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		85DA445C2AB5DD6A00F9483F = {
@@ -126,6 +163,7 @@
 		85DA447C2AB5E08900F9483F /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				85DA3A842ABCB6F400490EAF /* Extension */,
 				85DA44762AB5DD6B00F9483F /* Info.plist */,
 				85DA44732AB5DD6B00F9483F /* LaunchScreen.storyboard */,
 				85DA44682AB5DD6A00F9483F /* AppDelegate.swift */,
@@ -244,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				852736942AB8A353001F5B1E /* AppDelegateTests.swift in Sources */,
+				85DA3A832ABCB54400490EAF /* SettingsViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +296,7 @@
 				85DA44692AB5DD6A00F9483F /* AppDelegate.swift in Sources */,
 				85DA30EF2AB6EF9A00490EAF /* SettingsViewController.swift in Sources */,
 				85DA3A7E2AB77E3D00490EAF /* Grid.swift in Sources */,
+				85DA3A862ABCB71C00490EAF /* Mirror+reflectProperty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

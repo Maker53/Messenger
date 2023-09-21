@@ -9,8 +9,8 @@ protocol SettingsDisplayLogic: UIViewController, AnyObject {
 final class SettingsViewController: UIViewController {
     // MARK: - Views
 
-    private lazy var contentView: DisplaysSettingsView = SettingsView(
-        barHeight: navigationController?.navigationBar.frame.height
+    lazy var contentView: DisplaysSettingsView = SettingsView(
+        barHeight: navigationController?.navigationBar.frame.height ?? 0.0
     )
 
     // MARK: - Lifecycle

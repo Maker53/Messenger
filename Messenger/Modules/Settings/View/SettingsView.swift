@@ -22,7 +22,7 @@ final class SettingsView: UIView {
 
     // MARK: - Lifecycle
 
-    init(barHeight: CGFloat?) {
+    init(barHeight: CGFloat) {
         self.barHeight = barHeight
         super.init(frame: .zero)
 
