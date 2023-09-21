@@ -18,7 +18,7 @@ final class SettingsView: UIView {
 
     // MARK: - Private Properties
 
-    private let barHeight: CGFloat?
+    private let barHeight: CGFloat
 
     // MARK: - Lifecycle
 
@@ -53,7 +53,7 @@ private extension SettingsView {
 
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
-            tableView.topAnchor.constraint(equalTo: guide.topAnchor, constant: -(barHeight ?? 0) / 2),
+            tableView.topAnchor.constraint(equalTo: guide.topAnchor, constant: -barHeight / 2),
             tableView.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
