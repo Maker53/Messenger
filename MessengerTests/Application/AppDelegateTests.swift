@@ -6,16 +6,16 @@ import XCTest
 final class AppDelegateTests: XCTestCase {
     var appDelegate: AppDelegate!
 
-    override func setUpWithError() throws {
-        try super.setUpWithError()
+    override func setUp() {
+        super.setUp()
 
         appDelegate = AppDelegate()
     }
 
-    override func tearDownWithError() throws {
+    override func tearDown() {
         appDelegate = nil
 
-        try super.tearDownWithError()
+        super.tearDown()
     }
 
     func testDidFinishLaunchingWithOptions() {

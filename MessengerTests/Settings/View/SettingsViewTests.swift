@@ -5,17 +5,20 @@ import XCTest
 
 final class SettingsViewTests: XCTestCase {
     var view: SettingsView!
+    var tableManagerMock: ManagesSettingsTableMock!
 
-    override func setUpWithError() throws {
-        try super.setUpWithError()
+    override func setUp() {
+        super.setUp()
 
         view = SettingsView(barHeight: TestData.barHeight)
+        tableManagerMock = ManagesSettingsTableMock()
     }
 
-    override func tearDownWithError() throws {
+    override func tearDown() {
         view = nil
+        tableManagerMock = nil
 
-        try super.tearDownWithError()
+        super.tearDown()
     }
 
     func testInit() {
@@ -23,10 +26,21 @@ final class SettingsViewTests: XCTestCase {
         let tableView: UITableView! = Mirror.reflectProperty(of: view!, name: "tableView")
 
         XCTAssert(view.backgroundColor == TestData.backgroundColor)
+        XCTAssertEqual(tableView.style, .grouped)
         XCTAssert(tableView.backgroundColor == TestData.backgroundColor)
-        XCTAssert(tableView.tableHeaderView is SettingsHeaderView)
         XCTAssert(tableView.contentInsetAdjustmentBehavior == TestData.contentInsetAdjustmentBehavior)
         XCTAssertFalse(tableView.translatesAutoresizingMaskIntoConstraints)
+    }
+    
+    // MARK: - configureTableView
+    
+    func testConfigureTableView() {
+        // when
+        view.configureTableView(tableManagerMock)
+        // then
+        let tableView: UITableView! = Mirror.reflectProperty(of: view!, name: "tableView")
+        XCTAssertIdentical(tableView.dataSource, tableManagerMock)
+        XCTAssertIdentical(tableView.delegate, tableManagerMock)
     }
 }
 

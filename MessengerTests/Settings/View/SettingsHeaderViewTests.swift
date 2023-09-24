@@ -6,16 +6,16 @@ import XCTest
 final class SettingsHeaderViewTests: XCTestCase {
     var view: SettingsHeaderView!
 
-    override func setUpWithError() throws {
-        try super.setUpWithError()
+    override func setUp() {
+        super.setUp()
 
         view = SettingsHeaderView()
     }
 
-    override func tearDownWithError() throws {
+    override func tearDown() {
         view = nil
 
-        try super.tearDownWithError()
+        super.tearDown()
     }
 
     func testInit() {

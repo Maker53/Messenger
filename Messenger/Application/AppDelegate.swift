@@ -11,7 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        let viewController: SettingsDisplayLogic = SettingsViewController()
+        let viewController: SettingsDisplayLogic = SettingsViewController(tableManager: SettingsTableManager())
         viewController.configureNavigationBar()
 
         let navigationController = UINavigationController(rootViewController: viewController)

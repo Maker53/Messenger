@@ -2,15 +2,16 @@
 
 import UIKit
 
-protocol DisplaysSettingsView: UIView, AnyObject { }
+protocol DisplaysSettingsView: UIView, AnyObject {
+    func configureTableView(_ manager: ManagesSettingsTable)
+}
 
 final class SettingsView: UIView {
     // MARK: - Views
 
     private lazy var tableView: UITableView = {
-        let tableView = UITableView()
+        let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.backgroundColor = Color.backgroundColorPrimary
-        tableView.tableHeaderView = SettingsHeaderView()
         tableView.contentInsetAdjustmentBehavior = .never
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
@@ -25,7 +26,7 @@ final class SettingsView: UIView {
     init(barHeight: CGFloat) {
         self.barHeight = barHeight
         super.init(frame: .zero)
-
+        
         addSubviews()
         setupConstraints()
         backgroundColor = Color.backgroundColorPrimary
@@ -39,7 +40,12 @@ final class SettingsView: UIView {
 
 // MARK: - DisplaysSettingsView
 
-extension SettingsView: DisplaysSettingsView { }
+extension SettingsView: DisplaysSettingsView {
+    func configureTableView(_ manager: ManagesSettingsTable) {
+        tableView.dataSource = manager
+        tableView.delegate = manager
+    }
+}
 
 // MARK: - Private
 

@@ -5,25 +5,45 @@ import XCTest
 
 final class SettingsViewControllerTests: XCTestCase {
     var viewController: SettingsViewController!
+    var tableManagerMock: ManagesSettingsTableMock!
+    var contentViewMock: DisplaysSettingsViewMock!
 
-    override func setUpWithError() throws {
-        try super.setUpWithError()
+    override func setUp() {
+        super.setUp()
 
-        viewController = SettingsViewController()
+        tableManagerMock = ManagesSettingsTableMock()
+        contentViewMock = DisplaysSettingsViewMock()
+        viewController = SettingsViewController(tableManager: tableManagerMock)
     }
 
-    override func tearDownWithError() throws {
+    override func tearDown() {
+        tableManagerMock = nil
+        contentViewMock = nil
         viewController = nil
 
-        try super.tearDownWithError()
+        super.tearDown()
     }
+    
+    // MARK: - loadView
 
     func testLoadView() {
         // when
         viewController.loadViewIfNeeded()
         // then
-        let contentView: DisplaysSettingsView? = Mirror.reflectProperty(of: viewController!, name: "contentView")
+        let contentView = viewController.contentView
 
         XCTAssertNotNil(contentView, "Should setup contentView")
+    }
+    
+    // MARK: - viewDidLoad
+    
+    func testConfigureTableView() {
+        // given
+        viewController.contentView = contentViewMock
+        // when
+        viewController.viewDidLoad()
+        // then
+        XCTAssertEqual(contentViewMock.configureTableViewWasCalled, 1)
+        XCTAssertIdentical(contentViewMock.configureTableViewReceivedManager, tableManagerMock)
     }
 }

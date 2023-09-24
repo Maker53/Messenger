@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		852736942AB8A353001F5B1E /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852736932AB8A353001F5B1E /* AppDelegateTests.swift */; };
+		855923522AC0432500AAA199 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855923512AC0432500AAA199 /* Mocks.swift */; };
 		85DA30EF2AB6EF9A00490EAF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA30EE2AB6EF9A00490EAF /* SettingsViewController.swift */; };
 		85DA30F22AB6F23E00490EAF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA30F12AB6F23E00490EAF /* SettingsView.swift */; };
 		85DA30F42AB70C1C00490EAF /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA30F32AB70C1C00490EAF /* SettingsHeaderView.swift */; };
@@ -17,6 +18,9 @@
 		85DA3A862ABCB71C00490EAF /* Mirror+reflectProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA3A852ABCB71C00490EAF /* Mirror+reflectProperty.swift */; };
 		85DA3A882ABCC28B00490EAF /* SettingsViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA3A872ABCC28B00490EAF /* SettingsViewTests.swift */; };
 		85DA3A8A2ABCC56F00490EAF /* SettingsHeaderViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA3A892ABCC56F00490EAF /* SettingsHeaderViewTests.swift */; };
+		85DA3A8C2ABF1C8B00490EAF /* SettingsTableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA3A8B2ABF1C8B00490EAF /* SettingsTableManager.swift */; };
+		85DA3A8E2ABF48E100490EAF /* SettingsTableManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA3A8D2ABF48E100490EAF /* SettingsTableManagerTests.swift */; };
+		85DA3A952ABF4AB400490EAF /* SettingsMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA3A942ABF4AB400490EAF /* SettingsMocks.swift */; };
 		85DA44692AB5DD6A00F9483F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA44682AB5DD6A00F9483F /* AppDelegate.swift */; };
 		85DA44722AB5DD6B00F9483F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85DA44712AB5DD6B00F9483F /* Assets.xcassets */; };
 		85DA44752AB5DD6B00F9483F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85DA44732AB5DD6B00F9483F /* LaunchScreen.storyboard */; };
@@ -35,6 +39,7 @@
 /* Begin PBXFileReference section */
 		852736912AB8A353001F5B1E /* MessengerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessengerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		852736932AB8A353001F5B1E /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
+		855923512AC0432500AAA199 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		85DA30EE2AB6EF9A00490EAF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		85DA30F12AB6F23E00490EAF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		85DA30F32AB70C1C00490EAF /* SettingsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderView.swift; sourceTree = "<group>"; };
@@ -44,6 +49,9 @@
 		85DA3A852ABCB71C00490EAF /* Mirror+reflectProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mirror+reflectProperty.swift"; sourceTree = "<group>"; };
 		85DA3A872ABCC28B00490EAF /* SettingsViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewTests.swift; sourceTree = "<group>"; };
 		85DA3A892ABCC56F00490EAF /* SettingsHeaderViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderViewTests.swift; sourceTree = "<group>"; };
+		85DA3A8B2ABF1C8B00490EAF /* SettingsTableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableManager.swift; sourceTree = "<group>"; };
+		85DA3A8D2ABF48E100490EAF /* SettingsTableManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableManagerTests.swift; sourceTree = "<group>"; };
+		85DA3A942ABF4AB400490EAF /* SettingsMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMocks.swift; sourceTree = "<group>"; };
 		85DA44652AB5DD6A00F9483F /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85DA44682AB5DD6A00F9483F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85DA44712AB5DD6B00F9483F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +86,14 @@
 			path = MessengerTests;
 			sourceTree = "<group>";
 		};
+		855923502AC0431900AAA199 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				855923512AC0432500AAA199 /* Mocks.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		85DA30EC2AB6EF4000490EAF /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +108,7 @@
 				85DA30EE2AB6EF9A00490EAF /* SettingsViewController.swift */,
 				85DA30F12AB6F23E00490EAF /* SettingsView.swift */,
 				85DA30F32AB70C1C00490EAF /* SettingsHeaderView.swift */,
+				85DA3A8B2ABF1C8B00490EAF /* SettingsTableManager.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -126,6 +143,7 @@
 				85DA3A822ABCB54400490EAF /* SettingsViewControllerTests.swift */,
 				85DA3A872ABCC28B00490EAF /* SettingsViewTests.swift */,
 				85DA3A892ABCC56F00490EAF /* SettingsHeaderViewTests.swift */,
+				85DA3A8D2ABF48E100490EAF /* SettingsTableManagerTests.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -136,6 +154,14 @@
 				85DA3A852ABCB71C00490EAF /* Mirror+reflectProperty.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		85DA3A932ABF4A9D00490EAF /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				85DA3A942ABF4AB400490EAF /* SettingsMocks.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		85DA445C2AB5DD6A00F9483F = {
@@ -162,6 +188,7 @@
 				85DA447C2AB5E08900F9483F /* Application */,
 				85DA447D2AB5E0A700F9483F /* Resources */,
 				85DA30F02AB6F0AC00490EAF /* Modules */,
+				85DA3A932ABF4A9D00490EAF /* Mocks */,
 			);
 			path = Messenger;
 			sourceTree = "<group>";
@@ -169,6 +196,7 @@
 		85DA447C2AB5E08900F9483F /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				855923502AC0431900AAA199 /* Mocks */,
 				85DA3A842ABCB6F400490EAF /* Extension */,
 				85DA44762AB5DD6B00F9483F /* Info.plist */,
 				85DA44732AB5DD6B00F9483F /* LaunchScreen.storyboard */,
@@ -289,6 +317,7 @@
 			files = (
 				85DA3A8A2ABCC56F00490EAF /* SettingsHeaderViewTests.swift in Sources */,
 				852736942AB8A353001F5B1E /* AppDelegateTests.swift in Sources */,
+				85DA3A8E2ABF48E100490EAF /* SettingsTableManagerTests.swift in Sources */,
 				85DA3A832ABCB54400490EAF /* SettingsViewControllerTests.swift in Sources */,
 				85DA3A882ABCC28B00490EAF /* SettingsViewTests.swift in Sources */,
 			);
@@ -298,13 +327,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85DA3A8C2ABF1C8B00490EAF /* SettingsTableManager.swift in Sources */,
 				85DA30F42AB70C1C00490EAF /* SettingsHeaderView.swift in Sources */,
 				85DA3A7C2AB77DDC00490EAF /* Color.swift in Sources */,
 				85DA30F22AB6F23E00490EAF /* SettingsView.swift in Sources */,
 				85DA44692AB5DD6A00F9483F /* AppDelegate.swift in Sources */,
+				85DA3A952ABF4AB400490EAF /* SettingsMocks.swift in Sources */,
 				85DA30EF2AB6EF9A00490EAF /* SettingsViewController.swift in Sources */,
 				85DA3A7E2AB77E3D00490EAF /* Grid.swift in Sources */,
 				85DA3A862ABCB71C00490EAF /* Mirror+reflectProperty.swift in Sources */,
+				855923522AC0432500AAA199 /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
