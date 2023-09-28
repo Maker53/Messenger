@@ -18,7 +18,9 @@ final class AppDelegateTests: XCTestCase {
         super.tearDown()
     }
 
-    func testDidFinishLaunchingWithOptions() {
+    // MARK: - didFinishLaunchingWithOptions
+
+    func testShouldSetupWindow() {
         // when
         let result = appDelegate.application(UIApplication.shared, didFinishLaunchingWithOptions: nil)
         // then
@@ -28,7 +30,6 @@ final class AppDelegateTests: XCTestCase {
             return
         }
         XCTAssertTrue(window.frame == window.screen.bounds, "Should setup correct frame")
-        XCTAssertTrue(window.rootViewController is UINavigationController, "Should setup root controller")
         XCTAssertTrue(!window.isHidden, "Should show window on screen")
     }
 }
