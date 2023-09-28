@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		852736942AB8A353001F5B1E /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852736932AB8A353001F5B1E /* AppDelegateTests.swift */; };
 		855923522AC0432500AAA199 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855923512AC0432500AAA199 /* Mocks.swift */; };
+		855923552AC0555600AAA199 /* Coodrinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855923542AC0555600AAA199 /* Coodrinator.swift */; };
+		855923572AC0562C00AAA199 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855923562AC0562C00AAA199 /* AppCoordinator.swift */; };
+		855923592AC05A0B00AAA199 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855923582AC05A0B00AAA199 /* SettingsCoordinator.swift */; };
 		85DA30EF2AB6EF9A00490EAF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA30EE2AB6EF9A00490EAF /* SettingsViewController.swift */; };
 		85DA30F22AB6F23E00490EAF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA30F12AB6F23E00490EAF /* SettingsView.swift */; };
 		85DA30F42AB70C1C00490EAF /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DA30F32AB70C1C00490EAF /* SettingsHeaderView.swift */; };
@@ -40,6 +43,9 @@
 		852736912AB8A353001F5B1E /* MessengerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessengerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		852736932AB8A353001F5B1E /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		855923512AC0432500AAA199 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		855923542AC0555600AAA199 /* Coodrinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coodrinator.swift; sourceTree = "<group>"; };
+		855923562AC0562C00AAA199 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		855923582AC05A0B00AAA199 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		85DA30EE2AB6EF9A00490EAF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		85DA30F12AB6F23E00490EAF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		85DA30F32AB70C1C00490EAF /* SettingsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderView.swift; sourceTree = "<group>"; };
@@ -94,9 +100,20 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		855923532AC0554300AAA199 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				855923542AC0555600AAA199 /* Coodrinator.swift */,
+				855923562AC0562C00AAA199 /* AppCoordinator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		85DA30EC2AB6EF4000490EAF /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				855923582AC05A0B00AAA199 /* SettingsCoordinator.swift */,
+				85DA30EE2AB6EF9A00490EAF /* SettingsViewController.swift */,
 				85DA30ED2AB6EF8300490EAF /* View */,
 			);
 			path = Settings;
@@ -105,7 +122,6 @@
 		85DA30ED2AB6EF8300490EAF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				85DA30EE2AB6EF9A00490EAF /* SettingsViewController.swift */,
 				85DA30F12AB6F23E00490EAF /* SettingsView.swift */,
 				85DA30F32AB70C1C00490EAF /* SettingsHeaderView.swift */,
 				85DA3A8B2ABF1C8B00490EAF /* SettingsTableManager.swift */,
@@ -196,6 +212,7 @@
 		85DA447C2AB5E08900F9483F /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				855923532AC0554300AAA199 /* Navigation */,
 				855923502AC0431900AAA199 /* Mocks */,
 				85DA3A842ABCB6F400490EAF /* Extension */,
 				85DA44762AB5DD6B00F9483F /* Info.plist */,
@@ -327,7 +344,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				855923572AC0562C00AAA199 /* AppCoordinator.swift in Sources */,
 				85DA3A8C2ABF1C8B00490EAF /* SettingsTableManager.swift in Sources */,
+				855923592AC05A0B00AAA199 /* SettingsCoordinator.swift in Sources */,
 				85DA30F42AB70C1C00490EAF /* SettingsHeaderView.swift in Sources */,
 				85DA3A7C2AB77DDC00490EAF /* Color.swift in Sources */,
 				85DA30F22AB6F23E00490EAF /* SettingsView.swift in Sources */,
@@ -337,6 +356,7 @@
 				85DA3A7E2AB77E3D00490EAF /* Grid.swift in Sources */,
 				85DA3A862ABCB71C00490EAF /* Mirror+reflectProperty.swift in Sources */,
 				855923522AC0432500AAA199 /* Mocks.swift in Sources */,
+				855923552AC0555600AAA199 /* Coodrinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

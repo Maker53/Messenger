@@ -2,9 +2,7 @@
 
 import UIKit
 
-protocol SettingsDisplayLogic: UIViewController, AnyObject {
-    func configureNavigationBar()
-}
+protocol SettingsDisplayLogic: UIViewController, AnyObject { }
 
 final class SettingsViewController: UIViewController {
     // MARK: - Views
@@ -39,13 +37,18 @@ final class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         contentView.configureTableView(tableManager)
+        configureNavigationController()
     }
 }
 
 // MARK: - SettingsDisplayLogic
 
-extension SettingsViewController: SettingsDisplayLogic {
-    func configureNavigationBar() {
+extension SettingsViewController: SettingsDisplayLogic { }
+
+// MARK: - Private
+
+private extension SettingsViewController {
+    func configureNavigationController() {
         let leftBarButtonItem: UIBarButtonItem = .init(
             image: UIImage(systemName: "qrcode"),
             style: .plain,
@@ -62,5 +65,6 @@ extension SettingsViewController: SettingsDisplayLogic {
 
         navigationItem.rightBarButtonItem = rightBarButtonItem
         navigationItem.leftBarButtonItem = leftBarButtonItem
+        navigationController?.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
     }
 }

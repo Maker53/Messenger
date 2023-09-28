@@ -11,14 +11,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        let viewController: SettingsDisplayLogic = SettingsViewController(tableManager: SettingsTableManager())
-        viewController.configureNavigationBar()
-
-        let navigationController = UINavigationController(rootViewController: viewController)
-
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
+        let appCoordinator: Coordinator = AppCoordinator(window: window)
+        appCoordinator.start()
 
         return true
     }
